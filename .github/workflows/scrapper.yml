@@ -14,7 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-22.04
       env:
-      ## Environment variable
       URL_PAGE: ${{ secrets.URL_PAGE }}
       USER: ${{ secrets.USER }}
       PASSWORD: ${{ secrets.PASSWORD }}
