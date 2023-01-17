@@ -4,7 +4,8 @@ The main purpose of this project is to automate the attendance every week.
 
 - Puppeteer: this tool can be help us to scrape the page to automate
 - NodeJS
-  Its only to manpower group
+
+Its only to manpower group
 
 ## Getting Started
 
