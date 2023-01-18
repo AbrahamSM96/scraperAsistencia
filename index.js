@@ -15,13 +15,14 @@ dotenv.config();
   await page.goto(process.env.URL_PAGE || '');
   await page.screenshot({ path: 'captura1.png' });
 
-  await page.fill('#Username', process.env.USER || '', {
+  await page.fill('#Username', 'abrahamserrano96@hotmail.com', {
     timeout: 1000,
   });
   await page.fill('#Password', process.env.PASSWORD || '', { timeout: 1000 });
   await page.click('button');
-  await page.screenshot({ path: 'captura2.png', timeout: 3000 });
+  await page.screenshot({ path: 'captura2.png', timeout: 2000 });
   await page.click('text=Asistencia');
+  await page.screenshot({ path: 'captura4.png', timeout: 3000 });
   await page.click('span:has-text("Buscar")');
   await page.screenshot({ path: 'captura3.png', timeout: 3000 });
   await page.click('button:has-text("Acciones")');
@@ -29,7 +30,7 @@ dotenv.config();
   console.log(hour, 'hour');
   if (day !== 0 && day !== 6) {
     await page.screenshot({ path: 'captura9.png', timeout: 5000 });
-    if (hour === 10) {
+    if (hour >= 10 && hour <= 19) {
       await page.screenshot({ path: 'captura19.png', timeout: 5000 });
       // console.log(page.locator('a:has-text("Entrada")'))
       // await page.locator('.dropdown-item a:has-text("Entrada")')
