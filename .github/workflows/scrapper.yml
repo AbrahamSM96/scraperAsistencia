@@ -24,4 +24,9 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - run: npm run scrapper
+      - run: |
+          npm run scrapper
+          git config user.name scrapper-assistance-bot-abraham
+          git add .
+          git commit -m "[bot] assistance, push captures"
+          git push origin master
