@@ -36,11 +36,11 @@ dotenv.config();
       // await page.locator('.dropdown-item a:has-text("Entrada")')
       // await page.click('.dropdown-menu:has(.show)')
       await page.click('ul.dropdown-menu.show > li > a:has-text("Entrada")');
-      await page.screenshot({ path: 'entrada.png', timeout: 100 });
+      await page.screenshot({ path: 'entrada.png', timeout: 3000 });
 
       await page.click('button.btn-primary > span:has-text("Guardar")');
 
-      await page.screenshot({ path: 'entrada1.png', timeout: 400 });
+      await page.screenshot({ path: 'entrada1.png', timeout: 4000 });
       await browser.close();
     } else if (hour === 19) {
       await page.click('ul.dropdown-menu.show > li > a:has-text("Salida")');
